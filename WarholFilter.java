@@ -29,7 +29,7 @@ public class WarholFilter extends Filter
         
         for(int y = 0; y < height; y++) {
             for(int x = 0; x < width; x++) {
-                small.setPixel(x,y,image.getPixel(x*2,Y82));
+                small.setPixel(x,y,image.getPixel(x*2,y*2));
             }
         }
         
