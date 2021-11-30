@@ -25,16 +25,16 @@ public class BlueTintFilter extends Filter
      * @param  y  a sample parameter for a method
      * @return    the sum of x and y
      */
-    public void apply(OFImage picture)
+    public void apply(OFImage image)
     {
-        int height = picture.getHeight();
-        int width = picture.getWidth();
+        int height = image.getHeight();
+        int width = image.getWidth();
         
         for(int y = 0; y < height; y++) {
             for(int x = 0; x < width; x++) {
-                Color color = picture.getPixel(x,y);
+                Color color = image.getPixel(x,y);
                 int blue = color.getBlue();
-                picture.setPixel(x,y, new Color(0, 0, blue));
+                image.setPixel(x,y, new Color(0, 0, blue));
             }
         }
     }
